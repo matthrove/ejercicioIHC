@@ -1,0 +1,345 @@
+/* ===========================
+   ENCABEZADO SUPERIOR
+=========================== */
+.top-header {
+  position: fixed;
+  top: 0;
+  background-color: rgb(48, 155, 123);
+  width: 100%;
+  height: 5.625rem; /* 90px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem; /* 40px */
+  z-index: 100;
+}
+
+/* ====== MENÚ HORIZONTAL ====== */
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 1.25rem; /* 20px */
+  margin: 0;
+  padding: 0;
+}
+
+.Menu-Horizontal li {
+  position: relative;
+  padding: 0.938rem 1.25rem; /* 15px 20px */
+}
+
+.Menu-Horizontal a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.Menu-Horizontal li a:hover {
+  color: red;
+}
+
+/* ====== MENÚ VERTICAL ====== */
+.Menu-Vertical {
+  list-style: none;
+  position: absolute;
+  display: none;
+  background-color: white;
+  width: 12.5rem; /* 200px */
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+
+.Menu-Horizontal li:hover .Menu-Vertical {
+  display: block;
+}
+
+.Menu-Vertical li {
+  padding: 0.75rem 1rem;
+  color: rgb(62, 8, 242);
+}
+
+.Menu-Vertical li:hover {
+  background-color: rgb(235, 226, 226);
+}
+
+/* ===========================
+   SECCIÓN COMPRAR
+=========================== */
+.seccion-comprar {
+  padding: 7.5rem 1.25rem 5rem;
+  background-color: white;
+}
+
+.cont-gral-comprar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  gap: 2.5rem; /* 40px */
+  flex-wrap: wrap;
+}
+
+.cont-comp-texto {
+  flex: 1;
+}
+
+.cont-comp-texto h2 {
+  color: blue;
+  margin-bottom: 0.9375rem;
+  text-align: center;
+}
+
+.cont-comp-texto p {
+  color: black;
+  line-height: 1.6;
+}
+
+.cont-comp-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.cont-comp-imagen img {
+  width: 100%;
+  max-width: 31.25rem; /* 500px */
+  height: auto;
+  border-radius: 0.625rem; /* 10px */
+}
+
+/* ===========================
+   SECCIÓN CATEGORÍAS
+=========================== */
+.seccion-categorias {
+  padding: 5rem 1.25rem;
+  background-color: rgb(221, 230, 227);
+}
+
+.cont-gral-categorias {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.cont-cat-texto {
+  flex: 1;
+}
+
+.cont-cat-texto h2 {
+  color: blue;
+  margin-bottom: 0.9375rem;
+}
+
+.cont-cat-texto p {
+  color: black;
+  line-height: 1.6;
+}
+
+.cont-cat-video {
+  flex: 1;
+  text-align: center;
+}
+
+.cont-cat-video iframe {
+  width: 100%;
+  border-radius: 0.625rem;
+}
+
+/* ===========================
+   SECCIÓN FORMULARIO
+=========================== */
+.seccion-formulario {
+  background-color: white;
+  padding: 5rem 1.25rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.div-cont-formulario {
+  background-color: #fff;
+  padding: 1.875rem;
+  border: 0.125rem solid #000;
+  border-radius: 0.625rem;
+  width: 100%;
+  max-width: 31.25rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.div-cont-formulario h2 {
+  color: blue;
+  text-align: center;
+  margin-bottom: 0.625rem;
+}
+
+.div-cont-formulario p {
+  text-align: center;
+  margin-bottom: 1.5625rem;
+  color: #333;
+}
+
+/* Campos */
+.campo {
+  margin-bottom: 1.25rem;
+  background-color: #e2f5ee;
+  padding: 0.9375rem;
+  border-radius: 0.5rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+}
+
+/* Listas de opciones */
+.lista-checkbox,
+.lista-radio {
+  list-style: none;
+  padding: 0.625rem;
+  margin: 0;
+  background-color: #c6e8df;
+  border-radius: 0.5rem;
+}
+
+.lista-checkbox li,
+.lista-radio li {
+  margin-bottom: 0.5rem;
+}
+
+/* Botón */
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(255, 170, 0);
+}
+
+/* ===========================
+   PIE DE PÁGINA
+=========================== */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Contenedor flexible */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75rem; /* 1200px */
+  margin: auto;
+  gap: 2rem;
+}
+
+/* Marca o logotipo */
+.footer-brand {
+  flex: 1;
+  min-width: 12.5rem; /* 200px */
+}
+
+.footer-logo {
+  width: 3.75rem; /* 60px */
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Enlaces legales */
+.footer-links {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-links h4 {
+  color: black;
+  margin-bottom: 0.625rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Redes sociales */
+.footer-social {
+  flex: 1;
+  min-width: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-social h4 {
+  margin-right: 1rem;
+  color: black;
+}
+
+/* Íconos sociales */
+.social-icon {
+  width: 1.5rem; /* ≈ 24px */
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+  vertical-align: middle;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+  /* 768px */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-social img {
+    margin-bottom: 0.5rem;
+  }
+}
