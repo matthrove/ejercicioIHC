@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lib-Mat</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ENCABEZADO Y MENÚ -->
+    <nav class="top-header">
+      <a href="#" class="logo">
+        <img
+          height="65"
+          width="60"
+          src="imagenes/logo-book.jpeg"
+          alt="Logo Lib-Mat"
+        />
+      </a>
+
+      <ul class="Menu-Horizontal">
+        <li><a href="#">Comprar</a></li>
+
+        <li>
+          <a href="#">Categorías</a>
+          <ul class="Menu-Vertical">
+            <li><a href="#">Acción</a></li>
+            <li><a href="#">Ciencia ficción</a></li>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">Terror</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Seguimiento</a></li>
+        <li><a href="#">Configuraciones</a></li>
+      </ul>
+    </nav>
+
+    <!-- SECCIÓN COMPRAR -->
+    <section class="seccion-comprar">
+      <div class="cont-gral-comprar">
+        <div class="cont-comp-texto">
+          <h2>Bienvenidos a Lib-Mat</h2>
+          <p>
+            Explora nuestro catálogo y descubre historias que te harán viajar,
+            aprender y soñar. Aquí encontrarás desde los clásicos que marcaron
+            generaciones hasta las últimas novedades literarias.
+            <br /><br />
+            Selecciona una categoría, busca tu autor favorito o déjate guiar por
+            nuestras recomendaciones. Tu próxima aventura comienza con un libro.
+          </p>
+        </div>
+
+        <div class="cont-comp-imagen">
+          <img src="imagenes/libreria.jpg" alt="Imagen de librería" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CATEGORÍAS -->
+    <section class="seccion-categorias">
+      <div class="cont-gral-categorias">
+        <div class="cont-cat-texto">
+          <h2>Explora nuestras categorías</h2>
+          <p>
+            Sumérgete en distintos mundos literarios: emoción, conocimiento,
+            misterio y romance te esperan. ¡Encuentra tu próxima lectura ideal!
+          </p>
+        </div>
+
+        <div class="cont-cat-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/pm2CcIjf6dw?si=DMjwsFH1soLMPZRx"
+            title="Video de presentación Lib-Mat"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTANOS -->
+    <section class="seccion-formulario">
+      <div class="div-cont-formulario">
+        <h2>Formulario de Registro</h2>
+        <p>Complete todos los campos</p>
+
+        <form>
+          <div class="campo">
+            <label for="nombre">Nombres completos:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese sus nombres"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+              <option value="">Seleccione un país</option>
+              <option value="Peru">Perú</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Colombia">Colombia</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label>Intereses:</label>
+            <ul class="lista-checkbox">
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="tecnologia" />
+                  Tecnología</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="educacion" />
+                  Educación</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="deporte" />
+                  Deporte</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="arte" />
+                  Arte</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="ciencia" />
+                  Ciencia</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lista-radio">
+              <li>
+                <label
+                  ><input type="radio" name="genero" value="masculino" />
+                  Masculino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="genero" value="femenino" />
+                  Femenino</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <!-- Enlaces legales -->
+    
+<div class="footer-links">
+  <h4>Legal</h4>
+  <a href=""
+  >Política de Privacidad</a
+  >
+  <!-- Dentro de href llama a un documento pdf con la poltica-->
+  <a href="#">Términos y Condiciones</a>
+  <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+  <a href="">Protección de Datos</a>
+  </div>
+  <!-- Redes sociales con íconos personalizados -->
+  <div class="footer-social">
+  <h4>Síguenos</h4>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+  alt="Facebook"
+  class="social-icon"
+  /></a>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+  alt="Instagram"
+  class="social-icon"
+  /></a>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+  alt="LinkedIn"
+  class="social-icon"
+  /></a>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+  alt="Twitter"
+  class="social-icon"
+  /></a>
+  </div>
+  </div>
+  </footer>
+  </section>
+  </body>
+</html>
