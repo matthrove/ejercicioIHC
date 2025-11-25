@@ -4,7 +4,7 @@ function validarLogin(event) {
   event.preventDefault();
 
   // Clave estática para la demo
-  const CLAVE_SECRETA = "ok";
+  const CLAVE_SECRETA = "matth";
   const passwordInput = document.getElementById("password").value;
 
   // 2. Realizar la verificación
