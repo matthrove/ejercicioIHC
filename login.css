@@ -21,23 +21,19 @@
 /* La caja del formulario */
 
 .login-box {
-  background: rgba(255, 255, 255, 0.25); /* 🔹 Fondo transparente elegante */
-
-  backdrop-filter: blur(10px); /* 🔹 Efecto glass */
+  background: white;
 
   padding: 2.5rem; /* 40px */
 
   border-radius: 0.625rem; /* 10px */
 
-  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); /* Sombra */
 
   width: 100%;
 
   max-width: 25rem; /* 400px, el ancho máximo */
 
   text-align: center;
-
-  border: 1px solid rgba(255, 255, 255, 0.4); /* 🔹 borde translucido */
 }
 
 .login-box h2 {
@@ -123,48 +119,43 @@
 /* Estilos aplicados cuando la pantalla mide 600px o menos */
 
 @media (max-width: 600px) {
-}
+  /* El contenedor principal simula una vista de aplicación */
 
-/* El contenedor principal simula una vista de aplicación */
+  .login-container {
+    padding: 0; /* Quita el padding exterior */
 
-.login-container {
-  padding: 0; /* Quita el padding exterior */
+    background: #fff; /* Fondo blanco liso */
 
-  background: #fff; /* Fondo blanco liso */
+    align-items: flex-start; /* Mueve el formulario arriba */
 
-  align-items: flex-start; /* Mueve el formulario arriba */
+    min-height: auto;
+  }
 
-  min-height: auto;
-}
+  /* La caja del formulario se expande y pierde los adornos de tarjeta */
 
-/* La caja del formulario se expande y pierde adornos */
+  .login-box {
+    padding: 1.5rem; /* 24px de padding interno */
 
-.login-box {
-  padding: 1.5rem; /* 24px de padding interno */
+    margin-top: 2rem; /* 32px de espacio superior */
 
-  margin-top: 2rem; /* 32px de espacio superior */
+    width: 100%;
 
-  width: 100%;
+    max-width: 100%;
 
-  max-width: 100%;
+    box-shadow: none; /* Elimina la sombra */
 
-  box-shadow: none;
+    border-radius: 0; /* Elimina el borde redondeado */
 
-  border-radius: 0;
+    border: none;
+  }
 
-  border: none;
+  .login-box h2 {
+    font-size: 1.7rem; /* Ajuste sutil del tamaño */
 
-  background: rgba(255, 255, 255, 0.6); /* 🔹 más visible en móviles */
+    text-align: left;
+  }
 
-  backdrop-filter: blur(5px);
-}
-
-.login-box h2 {
-  font-size: 1.7rem;
-
-  text-align: left;
-}
-
-.input-group input {
-  padding: 1rem; /* Mejor tacto */
+  .input-group input {
+    padding: 1rem; /* Aumenta el padding para un mejor toque táctil (16px) */
+  }
 }
