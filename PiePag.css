@@ -1,0 +1,101 @@
+/* ===========================
+   PIE DE PÁGINA
+=========================== */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 2rem 1rem;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Contenedor flexible */
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 75rem; /* 1200px */
+    margin: auto;
+    gap: 2rem;
+  }
+  
+  /* Marca o logotipo */
+  .footer-brand {
+    flex: 1;
+    min-width: 12.5rem; /* 200px */
+  }
+  
+  .footer-logo {
+    width: 3.75rem; /* 60px */
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Enlaces legales */
+  .footer-links {
+    flex: 1;
+    min-width: 12.5rem;
+  }
+  
+  .footer-links h4 {
+    color: black;
+    margin-bottom: 0.625rem;
+  }
+  
+  .footer-links a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 0.3rem 0;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  /* Redes sociales */
+  .footer-social {
+    flex: 1;
+    min-width: 12.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .footer-social h4 {
+    margin-right: 1rem;
+    color: black;
+  }
+  
+  /* Íconos sociales */
+  .social-icon {
+    width: 1.5rem; /* ≈ 24px */
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+    vertical-align: middle;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  /* Responsive */
+@media (max-width: 48rem) {
+    /* 768px */
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-social {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .footer-social img {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
