@@ -1,5 +1,8 @@
 /* Contenedor principal: Centra el formulario */
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+.body {
+  font-family: "Noto Serif JP", serif;
+}
 .login-container {
   display: flex;
 

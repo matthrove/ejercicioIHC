@@ -163,6 +163,7 @@
    SECCIÓN FORMULARIO
 =========================== */
 .seccion-formulario {
+  font-family: "Noto Serif JP", serif;
   background-color: white;
   padding: 5rem 1.25rem;
   display: flex;
