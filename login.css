@@ -1,70 +1,112 @@
 /* Contenedor principal: Centra el formulario */
+
 .login-container {
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   min-height: 100vh;
+
   width: 100%;
+
   /* Fondo atractivo para la vista de escritorio */
+
   background: linear-gradient(135deg, #11cbbb 0%, rgb(48, 155, 123) 100%);
+
   padding: 1.25rem; /* 20px de padding */
 }
 
 /* La caja del formulario */
+
 .login-box {
-  background: white;
+  background: rgba(255, 255, 255, 0.25); /* 🔹 Fondo transparente elegante */
+
+  backdrop-filter: blur(10px); /* 🔹 Efecto glass */
+
   padding: 2.5rem; /* 40px */
+
   border-radius: 0.625rem; /* 10px */
-  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); /* Sombra */
+
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+
   width: 100%;
+
   max-width: 25rem; /* 400px, el ancho máximo */
+
   text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.4); /* 🔹 borde translucido */
 }
 
 .login-box h2 {
   margin-bottom: 1.5625rem; /* 25px */
+
   color: #333;
+
   font-size: 1.8rem;
 }
 
 /* División para agrupar Label e Input */
+
 .input-group {
   margin-bottom: 1.25rem; /* 20px */
+
   text-align: left;
 }
 
 .input-group label {
   display: block;
+
   margin-bottom: 0.5rem; /* 8px */
+
   font-weight: bold;
+
   color: #555;
 }
 
 .input-group input {
   width: 100%;
+
   padding: 0.75rem; /* 12px */
+
   border: 1px solid #ccc;
+
   border-radius: 0.3125rem; /* 5px */
+
   font-size: 1rem;
+
   transition: border-color 0.3s;
 }
 
 .input-group input:focus {
   border-color: #2575fc;
+
   outline: none;
 }
 
 /* Estilo del botón */
+
 .login-button {
   width: 100%;
+
   padding: 0.75rem; /* 12px */
+
   border: none;
+
   border-radius: 0.3125rem; /* 5px */
+
   background-color: #2575fc;
+
   color: white;
+
   font-size: 1.1rem;
+
   cursor: pointer;
+
   transition: background-color 0.3s ease;
+
   margin-top: 0.625rem; /* 10px */
 }
 
@@ -73,36 +115,56 @@
 }
 
 /* -------------------------------------- */
+
 /* MEDIA QUERY: RESPONSIVE MÓVILES */
+
 /* -------------------------------------- */
 
 /* Estilos aplicados cuando la pantalla mide 600px o menos */
+
 @media (max-width: 600px) {
-  /* El contenedor principal simula una vista de aplicación */
-  .login-container {
-    padding: 0; /* Quita el padding exterior */
-    background: #fff; /* Fondo blanco liso */
-    align-items: flex-start; /* Mueve el formulario arriba */
-    min-height: auto;
-  }
+}
 
-  /* La caja del formulario se expande y pierde los adornos de tarjeta */
-  .login-box {
-    padding: 1.5rem; /* 24px de padding interno */
-    margin-top: 2rem; /* 32px de espacio superior */
-    width: 100%;
-    max-width: 100%;
-    box-shadow: none; /* Elimina la sombra */
-    border-radius: 0; /* Elimina el borde redondeado */
-    border: none;
-  }
+/* El contenedor principal simula una vista de aplicación */
 
-  .login-box h2 {
-    font-size: 1.7rem; /* Ajuste sutil del tamaño */
-    text-align: left;
-  }
+.login-container {
+  padding: 0; /* Quita el padding exterior */
 
-  .input-group input {
-    padding: 1rem; /* Aumenta el padding para un mejor toque táctil (16px) */
-  }
+  background: #fff; /* Fondo blanco liso */
+
+  align-items: flex-start; /* Mueve el formulario arriba */
+
+  min-height: auto;
+}
+
+/* La caja del formulario se expande y pierde adornos */
+
+.login-box {
+  padding: 1.5rem; /* 24px de padding interno */
+
+  margin-top: 2rem; /* 32px de espacio superior */
+
+  width: 100%;
+
+  max-width: 100%;
+
+  box-shadow: none;
+
+  border-radius: 0;
+
+  border: none;
+
+  background: rgba(255, 255, 255, 0.6); /* 🔹 más visible en móviles */
+
+  backdrop-filter: blur(5px);
+}
+
+.login-box h2 {
+  font-size: 1.7rem;
+
+  text-align: left;
+}
+
+.input-group input {
+  padding: 1rem; /* Mejor tacto */
 }

@@ -1,6 +1,10 @@
 /* ===========================
    ENCABEZADO SUPERIOR
 =========================== */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+.body {
+  font-family: "Noto Serif JP", serif;
+}
 .top-header {
   position: fixed;
   top: 0;
@@ -86,6 +90,7 @@
 }
 
 .cont-comp-texto {
+  font-family: "Noto Serif JP", serif;
   flex: 1;
 }
 
