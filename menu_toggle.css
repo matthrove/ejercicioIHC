@@ -14,7 +14,10 @@
   min-width: 45px;
   min-height: 45px;
 }
-
+.panel-content {
+  right: 0 !important;
+  left: auto !important;
+}
 .menu-toggle:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);

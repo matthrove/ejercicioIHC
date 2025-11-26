@@ -55,7 +55,7 @@ span {
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-left: 1rem;
 }
 
 .menu-toggle {
@@ -89,7 +89,7 @@ span {
 .panel-content {
   position: absolute;
   top: calc(100% + 0.5rem);
-  right: -1rem;
+  right: 0;
   background-color: rgb(48, 155, 123);
   min-width: 280px;
   padding: 1.5rem;
