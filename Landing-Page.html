@@ -21,28 +21,46 @@
           alt="Logo Lib-Mat"
         />
       </a>
-       <!-- BOTÓN libro -->
-   <button class="menu-toggle" aria-label="Abrir menú">
-    &#9776;
-    <!-- Ícono de libro -->
-   </button>
-
-      <ul class="Menu-Horizontal">
-        <li><a href="#">Comprar</a></li>
-
-        <li>
-          <a href="#">Categorías</a>
-          <ul class="Menu-Vertical">
-            <li><a href="#">Acción</a></li>
-            <li><a href="#">Ciencia ficción</a></li>
-            <li><a href="#">Romance</a></li>
-            <li><a href="#">Terror</a></li>
+      
+      <!-- Panel desplegable a la derecha -->
+      <div class="header-panel">
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <span class="menu-icon">📖</span>
+        </button>
+        
+        <div class="panel-content">
+          <ul class="Menu-Horizontal">
+            <li><a href="#">Comprar</a></li>
+            <li>
+              <a href="#">Categorías</a>
+              <ul class="Menu-Vertical">
+                <li><a href="#">Acción</a></li>
+                <li><a href="#">Ciencia ficción</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Terror</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Seguimiento</a></li>
+            <li><a href="#">Configuraciones</a></li>
           </ul>
-        </li>
-
-        <li><a href="#">Seguimiento</a></li>
-        <li><a href="#">Configuraciones</a></li>
-      </ul>
+          
+          <!-- Redes sociales en el encabezado -->
+          <div class="header-social">
+            <a href="https://www.facebook.com" target="_blank" class="social-link-header">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" class="social-icon-header" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-link-header">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Instagram" class="social-icon-header" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-link-header">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" class="social-icon-header" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social-link-header">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145806.png" alt="Twitter" class="social-icon-header" />
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- SECCIÓN COMPRAR -->
@@ -178,49 +196,37 @@
         </form>
       </div>
     </section>
-    <!-- Enlaces legales -->
-    
-<div class="footer-links">
-  <h4>Legal</h4>
-  <a href=""
-  >Política de Privacidad</a
-  >
-  <!-- Dentro de href llama a un documento pdf con la poltica-->
-  <a href="#">Términos y Condiciones</a>
-  <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
-  <a href="">Protección de Datos</a>
-  </div>
-  <!-- Redes sociales con íconos personalizados -->
-  <div class="footer-social">
-  <h4>Síguenos</h4>
-  <a href="#"
-  ><img
-  src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
-  alt="Facebook"
-  class="social-icon"
-  /></a>
-  <a href="#"
-  ><img
-  src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
-  alt="Instagram"
-  class="social-icon"
-  /></a>
-  <a href="#"
-  ><img
-  src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
-  alt="LinkedIn"
-  class="social-icon"
-  /></a>
-  <a href="#"
-  ><img
-  src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
-  alt="Twitter"
-  class="social-icon"
-  /></a>
-  </div>
-  </div>
-  </footer>
-  </section>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos y Condiciones</a>
+          <a href="#">Protección de Datos</a>
+        </div>
+        
+        <!-- Redes sociales con íconos personalizados -->
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <div class="social-icons-container">
+            <a href="https://www.facebook.com" target="_blank" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" class="social-icon" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Instagram" class="social-icon" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" class="social-icon" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145806.png" alt="Twitter" class="social-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   <script src="menu_toggle.js"></script>
   </body>
 </html>

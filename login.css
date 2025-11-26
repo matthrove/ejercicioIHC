@@ -1,6 +1,17 @@
 /* Contenedor principal: Centra el formulario */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
-.body {
+
+* {
+  font-family: "Noto Serif JP", serif;
+}
+
+body {
+  font-family: "Noto Serif JP", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label, button, input, select, option, li, span {
   font-family: "Noto Serif JP", serif;
 }
 .login-container {
@@ -125,40 +136,44 @@
   /* El contenedor principal simula una vista de aplicación */
 
   .login-container {
-    padding: 0; /* Quita el padding exterior */
-
-    background: #fff; /* Fondo blanco liso */
-
+    padding: 1rem; /* Mantiene un poco de padding */
+    background: linear-gradient(135deg, #11cbbb 0%, rgb(48, 155, 123) 100%);
     align-items: flex-start; /* Mueve el formulario arriba */
-
-    min-height: auto;
+    min-height: 100vh;
+    padding-top: 2rem;
   }
 
   /* La caja del formulario se expande y pierde los adornos de tarjeta */
 
   .login-box {
     padding: 1.5rem; /* 24px de padding interno */
-
-    margin-top: 2rem; /* 32px de espacio superior */
-
+    margin-top: 0;
     width: 100%;
-
     max-width: 100%;
-
-    box-shadow: none; /* Elimina la sombra */
-
-    border-radius: 0; /* Elimina el borde redondeado */
-
-    border: none;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
   }
 
   .login-box h2 {
-    font-size: 1.7rem; /* Ajuste sutil del tamaño */
-
-    text-align: left;
+    font-size: 1.5rem; /* Ajuste sutil del tamaño */
+    text-align: center;
   }
 
   .input-group input {
     padding: 1rem; /* Aumenta el padding para un mejor toque táctil (16px) */
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+  
+  .login-button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 968px) {
+  .login-box {
+    max-width: 28rem;
+    padding: 2rem;
   }
 }

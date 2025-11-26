@@ -2,9 +2,35 @@
    ENCABEZADO SUPERIOR
 =========================== */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
-.body {
+
+* {
   font-family: "Noto Serif JP", serif;
 }
+
+body {
+  font-family: "Noto Serif JP", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+label,
+button,
+input,
+select,
+option,
+li,
+span {
+  font-family: "Noto Serif JP", serif;
+}
+
 .top-header {
   position: fixed;
   top: 0;
@@ -13,49 +39,162 @@
   height: 5.625rem; /* 90px */
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 3rem;
+  justify-content: space-between;
   padding: 0 2.5rem; /* 40px */
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Panel desplegable a la derecha */
+.header-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.menu-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 45px;
+  min-height: 45px;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-icon {
+  display: block;
+  font-size: 1.5rem;
+}
+
+/* Contenido del panel que se despliega */
+.panel-content {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: -1rem;
+  background-color: rgb(48, 155, 123);
+  min-width: 280px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0.5rem;
+  z-index: 1000;
+}
+
+/* En desktop, mostrar con hover */
+@media (min-width: 769px) {
+  .header-panel:hover .panel-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* En todos los dispositivos, mostrar cuando está activo */
+.header-panel .panel-content.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Redes sociales en el encabezado */
+.header-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.social-link-header {
+  display: inline-block;
+  transition: all 0.3s ease;
+  padding: 0.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-link-header:hover {
+  transform: scale(1.2) rotate(5deg);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-link-header:active {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.social-icon-header {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+  display: block;
 }
 
 /* ====== MENÚ HORIZONTAL ====== */
 .Menu-Horizontal {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  gap: 1.25rem; /* 20px */
+  flex-direction: column;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
 }
 
 .Menu-Horizontal li {
   position: relative;
-  padding: 0.938rem 1.25rem; /* 15px 20px */
+  padding: 0.5rem 0;
 }
 
-.Menu-Horizontal a {
+.Menu-Horizontal > li > a {
   text-decoration: none;
   color: black;
   font-weight: 500;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.Menu-Horizontal li a:hover {
-  color: red;
+.Menu-Horizontal > li > a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ====== MENÚ VERTICAL ====== */
 .Menu-Vertical {
   list-style: none;
-  position: absolute;
+  position: relative;
   display: none;
-  background-color: white;
-  width: 12.5rem; /* 200px */
-  padding: 0;
-  margin: 0;
-  top: 100%;
-  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0 0 0;
   box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 }
 
 .Menu-Horizontal li:hover .Menu-Vertical {
@@ -63,12 +202,22 @@
 }
 
 .Menu-Vertical li {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.Menu-Vertical li a {
   color: rgb(62, 8, 242);
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
 }
 
 .Menu-Vertical li:hover {
   background-color: rgb(235, 226, 226);
+}
+
+.Menu-Vertical li a:hover {
+  color: rgb(48, 155, 123);
 }
 
 /* ===========================
@@ -115,6 +264,12 @@
   max-width: 31.25rem; /* 500px */
   height: auto;
   border-radius: 0.625rem; /* 10px */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cont-comp-imagen img:hover {
+  transform: scale(1.02);
 }
 
 /* ===========================
@@ -157,6 +312,7 @@
 .cont-cat-video iframe {
   width: 100%;
   border-radius: 0.625rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ===========================
@@ -247,4 +403,188 @@ button {
 
 button:hover {
   background-color: rgb(255, 170, 0);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .top-header {
+    padding: 0 1.5rem;
+    height: 5rem;
+  }
+
+  .logo img {
+    height: 55px;
+    width: 50px;
+  }
+
+  .seccion-comprar {
+    padding: 6.5rem 1.5rem 3rem;
+  }
+
+  .cont-gral-comprar,
+  .cont-gral-categorias {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cont-comp-texto,
+  .cont-cat-texto {
+    text-align: center;
+  }
+
+  .cont-comp-imagen img {
+    max-width: 100%;
+  }
+
+  .cont-cat-video iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+  }
+
+  .panel-content {
+    min-width: 250px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 0 1rem;
+    height: 4.5rem;
+  }
+
+  .logo img {
+    height: 50px;
+    width: 45px;
+  }
+
+  .menu-toggle {
+    font-size: 1.3rem;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .panel-content {
+    min-width: calc(100vw - 2rem);
+    right: 1rem;
+    left: auto;
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .seccion-comprar {
+    padding: 5.5rem 1rem 2rem;
+  }
+
+  .seccion-categorias {
+    padding: 3rem 1rem;
+  }
+
+  .seccion-formulario {
+    padding: 3rem 1rem;
+  }
+
+  .div-cont-formulario {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .cont-comp-texto h2,
+  .cont-cat-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .cont-comp-texto p,
+  .cont-cat-texto p {
+    font-size: 0.95rem;
+  }
+
+  .cont-cat-video iframe {
+    min-height: 250px;
+    width: 100%;
+  }
+
+  .header-social {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .social-icon-header {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .Menu-Horizontal {
+    gap: 0.75rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .top-header {
+    height: 4rem;
+    padding: 0 0.75rem;
+  }
+
+  .logo img {
+    height: 45px;
+    width: 40px;
+  }
+
+  .menu-toggle {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0.35rem 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .panel-content {
+    min-width: calc(100vw - 1.5rem);
+    right: 0.75rem;
+    left: auto;
+    padding: 1rem;
+  }
+
+  .seccion-comprar {
+    padding: 5rem 0.75rem 1.5rem;
+  }
+
+  .seccion-categorias {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .seccion-formulario {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .div-cont-formulario {
+    padding: 1.25rem;
+  }
+
+  .cont-comp-texto h2,
+  .cont-cat-texto h2 {
+    font-size: 1.3rem;
+  }
+
+  .cont-comp-texto p,
+  .cont-cat-texto p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .cont-cat-video iframe {
+    min-height: 200px;
+  }
+
+  .social-icon-header {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
