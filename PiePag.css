@@ -136,7 +136,7 @@ span {
   width: 2.25rem;
   height: 2.25rem;
   transition: all 0.3s ease;
-  vertical-align: middle;
+
   display: block;
 }
 
