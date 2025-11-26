@@ -15,29 +15,14 @@ if (btn && panelContent) {
 
   // Cerrar el panel al hacer click fuera de él
   document.addEventListener("click", (e) => {
-    // En móviles, siempre cerrar al hacer click fuera
-    if (window.innerWidth <= 768) {
-      if (!btn.contains(e.target) && !panelContent.contains(e.target)) {
+    // Si el panel está activo y se hace click fuera, cerrarlo
+    if (panelContent.classList.contains("active")) {
+      if (!headerPanel.contains(e.target)) {
         panelContent.classList.remove("active");
-      }
-    }
-    // En desktop, también permitir cerrar con click fuera si está activo
-    else {
-      if (panelContent.classList.contains("active")) {
-        if (!headerPanel.contains(e.target)) {
-          panelContent.classList.remove("active");
-        }
       }
     }
   });
 
-  // Prevenir que el hover cierre el panel cuando está activo en móviles
-  if (headerPanel) {
-    headerPanel.addEventListener("mouseleave", () => {
-      // Solo cerrar con hover en desktop
-      if (window.innerWidth > 768) {
-        panelContent.classList.remove("active");
-      }
-    });
-  }
+  // El hover funciona automáticamente en desktop cuando el panel NO está activo
+  // Cuando está activo (por click), se mantiene abierto hasta que se haga click fuera
 }

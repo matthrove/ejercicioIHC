@@ -55,7 +55,8 @@ span {
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 1rem;
+  margin-left: auto;
+  margin-right: 3rem;
 }
 
 .menu-toggle {
@@ -89,7 +90,7 @@ span {
 .panel-content {
   position: absolute;
   top: calc(100% + 0.5rem);
-  right: 0;
+  right: -8rem;
   background-color: rgb(48, 155, 123);
   min-width: 280px;
   padding: 1.5rem;
@@ -106,8 +107,8 @@ span {
 /* En desktop, mostrar con hover */
 @media (min-width: 769px) {
   .header-panel:hover .panel-content {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
     transform: translateY(0) scale(1);
   }
 }
@@ -445,9 +446,13 @@ button:hover {
     height: auto;
     min-height: 300px;
   }
+  .header-panel {
+    margin-right: 2rem;
+  }
 
   .panel-content {
     min-width: 250px;
+    right: -6rem;
   }
 }
 
